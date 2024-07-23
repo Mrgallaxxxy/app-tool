@@ -11,6 +11,7 @@ import logging
 import os
 import asyncio
 
+
 # Настройка логирования
 дщп = logging.basicConfig(level=logging.DEBUG)
 

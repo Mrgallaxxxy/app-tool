@@ -3,6 +3,7 @@ from discord.ext import commands
 from discord import app_commands
 import asyncio 
 import datetime
+from Views.utils import *
 
 
 
@@ -28,7 +29,7 @@ class AppPannel(commands.Cog):
             time = discord.utils.format_dt(user.joined_at, 'R')
             embed.add_field(name="Пользователь", value=f"ID ・{user.id}\n \n Joined: {time}")
             embed.add_field(name="utils", value="・Select util from select menu・")
-            await interaction.response.send_message(embed=embed)
+            await interaction.response.send_message(embed=embed, view=Utils())
         else:
             return
 
